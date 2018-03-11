@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>calculadora Años Perro</title>
+    </head>
+    <body>
+        <script>
+        window.onload=function()
+
+        {
+            document.getElementById('btnCalc').addEventListener('click',CalcAge);
+        }
+        function CalcAge(e)
+        {
+//            alert("asdfafdad");
+            var age = document.getElementById('dogAge').value;
+            age = age*7;
+            var result = "In dig years, your dog is: " + age;
+            document.getElementById('result').innerHTML = result;
+        }
+        
+    </script>
+</head>
+
+<body>
+    <div class="app">
+        <h1>PhoneGap</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <hl>Dog Years Calculator</hl>
+    <label for="dogAge">Dog Age in Human Years:</label>
+     <input id="dogAge" type="number"/>
+     <button id="btnCalc">Calculate</button>
+     <div id="result"></div>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+</html>
